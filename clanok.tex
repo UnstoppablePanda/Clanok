@@ -1,0 +1,162 @@
+% Metódy inžinierskej práce
+
+\documentclass[10pt,twocolumn,twoside,slovak,a4paper]{coursepaper}
+
+\usepackage{wrapfig}
+\usepackage[slovak]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage{amsmath} % Pre matematické prostredia
+\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url} % príkaz \url na formátovanie URL
+\usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\graphicspath{ {./images/} }
+\usepackage{cite}
+%\usepackage{times}
+\graphicspath{ {./CV2/obrazky/} }
+\pagestyle{headings}
+
+\title{Názov\thanks{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2015/16, vedenie: Meno Priezvisko}} % meno a priezvisko vyučujúceho na cvičeniach
+
+\author{Meno Priezvisko\\[2pt]
+	{\small Slovenská technická univerzita v Bratislave}\\
+	{\small Fakulta informatiky a informačných technológií}\\
+	{\small \texttt{...@stuba.sk}}
+	}
+
+\date{\small 30. september 2015} % upravte
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\ldots
+\end{abstract}
+
+
+
+\section{Úvod}
+
+Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
+
+Uveďte explicitne štruktúru článku. Tu je nejaký príklad.
+\input{novy.txt}
+Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
+Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
+
+Novy odsek
+
+Záverečné poznámky prináša časť~\ref{zaver}.
+
+\section{Nova cast}
+Toto je sekcia s nazvom nova cast
+
+\begin{figure*}[h]
+    \centering
+    \includegraphics[scale=0.5]{CV2/obrazky/smajlik.pdf}
+    \caption{Process Diagram covering both columns}
+    \label{fig:process}
+\end{figure*}
+\section{Nejaká časť} \label{nejaka}
+
+Z obr.~\ref{f:rozhod} je všetko jasné. 
+
+\begin{figure*}[tbh]
+\centering
+%\includegraphics[scale=1.0]{diagram.pdf}
+Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom \verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
+\caption{Rozhodujúci argument.}
+\label{f:rozhod}
+\end{figure*}
+
+
+
+\section{Iná časť} \label{ina}
+
+Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.} 
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[scale=0.5]{CV2/obrazky/Fiit.pdf}
+  \end{center}
+  \caption{Fiit.pdf}
+\end{wrapfigure}
+
+Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
+
+
+\subsection{Nejaké vysvetlenie} \label{ina:nejake}
+
+Niekedy treba uviesť zoznam:
+
+\begin{itemize}
+\item jedna vec
+\item druhá vec
+	\begin{itemize}
+	\item x
+	\item y
+	\end{itemize}
+\end{itemize}
+
+Ten istý zoznam, len číslovaný:
+
+\begin{enumerate}
+\item jedna vec
+\item druhá vec
+	\begin{enumerate}
+	\item x
+	\item y
+	\end{enumerate}
+\end{enumerate}
+
+
+\subsection{Ešte nejaké vysvetlenie} \label{ina:este}
+
+\paragraph{Veľmi dôležitá poznámka.}
+Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
+
+
+
+\section{Dôležitá časť} \label{dolezita}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.8]{CV2/obrazky/proces.pdf}
+    \caption{Process Diagram}
+    \label{fig:process}
+    \includegraphics[scale=0.8]{CV2/obrazky/graf.pdf}
+    \caption{Graph Diagram}
+    \label{fig:graph}
+\end{figure}
+
+
+\section{Ešte dôležitejšia časť} \label{dolezitejsia}
+\begin{equation}
+a_n = 2n + 1
+\end{equation}
+\begin{equation}
+\begin{bmatrix}
+a_{11} & a_{12} & a_{13} & a_{14} \\
+a_{21} & a_{22} & a_{23} & a_{24} \\
+a_{31} & a_{32} & a_{33} & a_{34} \\
+a_{41} & a_{42} & a_{43} & a_{44} \\
+a_{51} & a_{52} & a_{53} & a_{54}
+\end{bmatrix}
+\end{equation}
+
+\section{Záver} \label{zaver} % prípadne iný variant názvu
+
+
+
+%\acknowledgement{Ak niekomu chcete poďakovať\ldots}
+
+
+% týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
+\bibliography{literatura}
+\bibliographystyle{abbrv} % prípadne alpha, abbrv alebo hociktorý iný
+\end{document}
